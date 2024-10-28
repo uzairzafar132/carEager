@@ -92,7 +92,7 @@ exports.login = async (req, res) => {
 
   const usertoken = jwt.sign({ userId: user._id, phone: user.phone }, secretKey);
 
-  res.json({ usertoken, userId: user._id, username: user.name });
+  res.json({ usertoken, userId: user._id, username: user.name ,profile_pic: user.profilePicture});
 
 };
 
